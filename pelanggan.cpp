@@ -14,12 +14,16 @@ bool Route::Pelanggan(){
     std::cout<<std::endl<<"masukkan pilihan";std::cin>>val;
 
     if (val==1){
+      std::system("clear");
       Route::Display_Coffee();
+      std::system("clear");
       std::cout<<std::endl;
     }else if(val==2){
 
     }else if(val==3){
+      std::system("clear");
       Route::Order();
+      std::system("clear");
       std::cout<<std::endl;
     }
   }while(val!=4);

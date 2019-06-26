@@ -55,10 +55,11 @@ void Route::Price(){
   std::string name;
   int money;
   std::cout<<"masukkan nama pemesan : ";std::cin>>name;
+  std::system("clear");
 
   //lalu validasi apakah nama ada dalam daftar
   auto plan = sizeof(wt)/sizeof(wt[0]);
-  std::cout<<name<<std::endl;
+  // std::cout<<name<<std::endl;
   for (auto i=0;i<plan;i++){
     if (name == wt[i].py.od.name){//validasi nama
       
@@ -75,6 +76,9 @@ void Route::Price(){
       }else{
         std::cout<<"uang anda kurang"<<std::endl;
       }
+      char Y;
+      std::cout<<"ingin transaksi lagi?(y)";std::cin>>Y;
+      std::system("clear");
     }
   }
 }
@@ -88,7 +92,7 @@ void Route::Price(){
 
 void Route::Delete_Order(){
   if (!empty()){
-    std::cout<<"antrian "<<wt[0].py.od.name<<"dihapus\n";
+    std::cout<<"antrian "<<wt[0].py.od.name<<" dihapus\n";
     for(auto i=wt[0].head;i<wt[0].tail;i++){
       wt[i].py.od=wt[i+1].py.od;
     }
@@ -106,6 +110,8 @@ void Route::Display_Order(){
     std::cout<<"kopi pesanan : "<<wt[i].py.od.kopi<<std::endl;
     std::cout<<"jumlah : "<<wt[i].py.od.totalOrder<<std::endl;
   }
+  char Y;
+  std::cout<<std::endl<<"lanjut transaksi?(y) ";std::cin>>Y;
 }
 
 
@@ -177,6 +183,8 @@ void Route::Display_Coffee(){
     std::cout<<"nama : "<<cf[i].name<<"\tharga : "<<cf[i].price;
     std::cout<<std::endl;
   } 
+  char Y;
+  std::cout<<std::endl<<"lanjut transaksi?(y) ";std::cin>>Y;
 }
 
 void Route::Order(){

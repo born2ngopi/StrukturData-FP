@@ -16,9 +16,12 @@ bool Route::Barista(){
     std::cout<<std::endl<<"masukkan pilihan = ";std::cin>>val;
 
     if (val==1){
+      std::system("clear");
       Route::Display_Order();
+      std::system("clear");
       std::cout<<std::endl;
     }else if(val ==2){
+      std::system("clear");
       Route::Delete_Order();
       std::cout<<std::endl;
     }
