@@ -19,7 +19,8 @@ bool Route::Pelanggan(){
       std::system("clear");
       std::cout<<std::endl;
     }else if(val==2){
-
+      std::system("clear");
+      Route::Search_Name();
     }else if(val==3){
       std::system("clear");
       Route::Order();

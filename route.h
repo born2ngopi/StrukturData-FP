@@ -10,6 +10,7 @@ namespace Route{
     void Display_Order();
     //pelanggan
     void Display_Coffee();
+    void Search_Name();
     void Order();
     //kasir
     void Price();

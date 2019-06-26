@@ -43,6 +43,40 @@ void Route::init(){
 //bagian ini dipanggil di file kasir.cpp
 //================ Start =====================
 //
+//
+//
+void Route::Search_Name(){
+  
+  int posisi;
+  bool ketemu;
+  std::string name;
+  char Y;
+
+  std::cout << "masukkan nama kopi yang dicari = ";std::cin>>name;
+  
+  ketemu=0;
+  auto len = sizeof(cf)/sizeof(cf[0]);
+  for (int i=0;i<len;i++){
+    if (cf[i].name==name){
+      ketemu = true;
+      posisi = i;
+      i=len;
+    }
+  }
+  if (ketemu){
+    std::cout<<"nama kopi yang dicari\n";
+    std::cout<<"nama : "<<cf[posisi].name<<" harga : "<<cf[posisi].price<<std::endl;
+    std::cout<<"\ningin melanjutkan transaksi?(y) ";std::cin>>Y;
+    std::system("clear");
+  }else{
+    std::cout<<"kopi yang anda cari tidak ditemukan"<<std::endl;
+    std::cout<<"\ningin melanjutkan transaksi?(y) ";std::cin>>Y;
+    std::system("clear");
+  }
+
+}
+
+
 void Route::Price(){
   //fungsi ini digunakan untuk menampilkan data di kasir
   //1. nama pemesan
